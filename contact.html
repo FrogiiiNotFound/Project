@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>HostCloud</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="css/versions.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <script src="js/modernizer.js"></script>
+
+</head>
+<body class="host_version"> 
+	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header tit-up">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">Авторизация</h4>
+			</div>
+			<div class="modal-body customer-box row">
+				<div class="col-md-12">
+					<ul class="nav nav-tabs">
+						<li class="active"><a href="#Login" data-toggle="tab">Войти</a></li>
+						<li><a href="#Registration" data-toggle="tab">Создать аккаунт</a></li>
+					</ul>
+					<div class="tab-content">
+						<div class="tab-pane active" id="Login">
+							<form role="form" class="form-horizontal">
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="email1" placeholder="Имя пользователя" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="exampleInputPassword1" placeholder="Электронная почта" type="email">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-10">
+									<button type="submit" class="btn btn-light btn-radius btn-brd grd1">
+										Подтвердить
+									</button>
+									<a class="for-pwd" href="javascript:;">Забыли пароль?</a>
+								</div>
+							</div>
+							</form>
+						</div>
+						<div class="tab-pane" id="Registration">
+							<form role="form" class="form-horizontal">
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" placeholder="Имя" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="email" placeholder="Электронная почта" type="email">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="mobile" placeholder="Мобильный телефон" type="email">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="password" placeholder="Пароль" type="password">
+								</div>
+							</div>
+							<div class="row">							
+								<div class="col-sm-10">
+									<button type="button" class="btn btn-light btn-radius btn-brd grd1">
+										Сохранить &amp; Продолжить
+									</button>
+									<button type="button" class="btn btn-light btn-radius btn-brd grd1">
+										Отмена</button>
+								</div>
+							</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	  </div>
+	</div>
+	<div id="preloader">
+		<div class="loading">
+			<div class="finger finger-1">
+				<div class="finger-item">
+				<span></span><i></i>
+				</div>
+			</div>
+  			<div class="finger finger-2">
+				<div class="finger-item">
+				<span></span><i></i>
+				</div>
+			</div>
+  			<div class="finger finger-3">
+				<div class="finger-item">
+				<span></span><i></i>
+				</div>
+			</div>
+  			<div class="finger finger-4">
+				<div class="finger-item">
+				<span></span><i></i>
+				</div>
+			</div>
+  			<div class="last-finger">
+				<div class="last-finger-item"><i></i></div>
+			</div>
+		</div>
+	</div>
+
+    <header class="header header_style_01">
+        <nav class="megamenu navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Переключатель навигации</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="images/logos/logo-hosting.png" alt="image"></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="features.html">Возможности</a></li>
+                        <li><a href="domain.html">Домены</a></li>
+                        <li><a href="hosting.html">Хостинг</a></li>
+                        <li><a href="pricing.html">Тарифы</a></li>
+                        <li><a class="active" href="contact.html">Контакты</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#contact" class="btn-light btn-radius btn-brd log" data-toggle="modal" data-target="#login"><i class="flaticon-padlock"></i> Войти</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+	
+	<div class="all-title-box">
+		<div class="container text-center">
+			<h1>Контакты<span class="m_1">Остались вопросы? Задайте их нам!</span></h1>
+		</div>
+	</div>
+	
+    <div id="support" class="section wb">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>Нужна помощь? Мы всегда онлайн!</h3>
+                <p class="lead">Пожалуйста, заполните форму ниже, чтобы получить подробную информацию о наших услугах и специальных предложениях.<br>Множество владельцев сайтов уже сотрудничают с нами!</p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="contact_form">
+                        <div id="message"></div>
+                        <form id="contactform" class="row" action="contact.php" name="contactform" method="post">
+                            <fieldset class="row-fluid">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <input type="text" name="first_name" id="first_name" class="form-control" placeholder="First Name">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Last Name">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <input type="email" name="email" id="email" class="form-control" placeholder="Your Email">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <input type="text" name="phone" id="phone" class="form-control" placeholder="Your Phone">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <label class="sr-only">Выберите услугу</label>
+                                    <select name="select_service" id="select_service" class="selectpicker form-control" data-style="btn-white">
+                                        <option value="12">Выберите услугу</option>
+                                        <option value="Web Design">Веб-хостинг</option>
+                                        <option value="Web Development">Общий хостинг</option>
+                                        <option value="Graphic Design">Хостинг для реселлеров</option>
+                                        <option value="Others">Другие</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <label class="sr-only">Выберите страну</label>
+                                    <select name="select_price" id="select_price" class="selectpicker form-control" data-style="btn-white">
+                                        <option value="India">Индия</option>
+                                        <option value="Italy">Италия</option>
+                                        <option value="Holland">Голландия</option>
+                                        <option value="Germany">Германия</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <textarea class="form-control" name="comments" id="comments" rows="6" placeholder="Give us more details.."></textarea>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                                    <button type="submit" value="SEND" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Отправить запрос</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<div class="map-main-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<div class="map-btn"><i class="fa fa-map-pin" aria-hidden="true"></i></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="map-box">
+		<div id="custom-places" class="small-map"></div>
+	</div>
+	
+    <div class="parallax section db parallax-off" style="background-image:url('uploads/parallax_02.jpg');">
+        <div class="container">
+            <div class="row logos">
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src="uploads/logo_01.png" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src="uploads/logo_02.png" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src="uploads/logo_03.png" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src="uploads/logo_04.png" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src="uploads/logo_05.png" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src="uploads/logo_06.png" alt="" class="img-repsonsive"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section nopad cac text-center">
+        <a href="#"><h3>Интересуетесь созданием сайта? Получите бесплатную консультацию!</h3></a>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <img src="images/logos/logo-hosting-light.png" alt="">
+                            <small>Веб-хостинг</small>
+                        </div>
+                        <p> Мы предлагаем широкий выбор тарифных планов, чтобы удовлетворить любые потребности вашего сайта. От простого блога до крупного интернет-магазина.</p>
+                        <p>Наши серверы обеспечивают высокую скорость и стабильность работы вашего сайта. Круглосуточная поддержка всегда готова помочь.</p>
+                    </div>
+                </div>
+				
+                <div class="col-md-3 col-sm-3 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Контактная информация</h3>
+                        </div>
+
+                        <ul class="footer-links">
+                            <li><a href="mailto:#">sup@hostcloud.com</a></li>
+                            <li>883 10th Avenue, New York, NY 10019</li>
+                            <li>+1 313 292 6730</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-2 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Соц. сети</h3>
+                        </div>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fa fa-facebook"></i> 22.543 Likes</a></li>
+                            <li><a href="#"><i class="fa fa-github"></i> 128 Projects</a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i> 12.860 Followers</a></li>
+                            <li><a href="#"><i class="fa fa-dribbble"></i> 3312 Shots</a></li>
+                            <li><a href="#"><i class="fa fa-pinterest"></i>3331 Pins</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="copyrights">
+        <div class="container">
+            <div class="footer-distributed">
+                <div class="footer-left">
+                    <p class="footer-company-name">Все права защищены.</p>
+                
+
+                <div>
+                    <link rel="stylesheet" href="policy.css">
+
+                    <a class="policy-link" id="openPolicy">Политика конфиденциальности</a>
+
+                    <div class="policy-link-modal" id="policyModal">
+                        <div class="policy-link-modal-content">
+                          <span class="policy-link-close" id="policyClose">&times;</span>
+                          <h2>Политика конфиденциальности</h2>
+                          <br>
+                          <p>
+                            Настоящая Политика конфиденциальности описывает, как компания <strong>HostCloud</strong> 
+                            (далее – «Компания») осуществляет сбор, хранение и обработку персональных данных пользователей. 
+                            Компания стремится обеспечить безопасность и конфиденциальность любой информации, 
+                            предоставляемой клиентами или собираемой в процессе пользования нашими услугами.
+                          </p>
+                          <br>
+                          <p>
+                            1. <strong>Сбор персональных данных.</strong> Мы можем собирать информацию о пользователях, 
+                            включая контактные данные, сведения о платежах и активности на сайте. 
+                            Сбор осуществляется при регистрации аккаунта, оформлении заявок и при использовании 
+                            функционала платформы.
+                          </p>
+                          <br>
+                          <p>
+                            2. <strong>Использование персональных данных.</strong> Компания использует собранную 
+                            информацию для предоставления и улучшения услуг, обработки операций и обеспечения 
+                            законности деятельности. Данные также могут использоваться для информирования 
+                            о новых продуктах, сервисах и специальных предложениях.
+                          </p>
+                          <br>
+                          <p>
+                            3. <strong>Передача третьим лицам.</strong> Компания не передаёт персональные данные 
+                            третьим лицам, за исключением случаев, предусмотренных законодательством 
+                            или необходимых для выполнения обязательств перед пользователями (например, 
+                            платёжным и финансовым организациям).
+                          </p>
+                          <br>
+                          <p>
+                            4. <strong>Защита данных.</strong> Мы применяем технологические и организационные меры 
+                            для защиты персональных данных от несанкционированного доступа, потери, изменения 
+                            или раскрытия. Обработка данных осуществляется в соответствии с действующими нормами 
+                            и стандартами информационной безопасности.
+                          </p>
+                          <br>
+                          <p>
+                            5. <strong>Файлы «cookie».</strong> Наш сайт может использовать cookie для улучшения 
+                            взаимодействия с пользователями, запоминая личные настройки и предпочтения. Пользователи 
+                            могут ограничить работу cookie или отключить их в настройках браузера, однако 
+                            это может повлиять на доступный функционал.
+                          </p>
+                          <br>
+                          <p>
+                            6. <strong>Изменения в Политике.</strong> Компания оставляет за собой право вносить 
+                            изменения в настоящую Политику в любое время. Изменения вступают в силу с момента 
+                            публикации обновлённой версии на нашем сайте.
+                          </p>
+                          <br>
+                          <p>
+                            Используя наш сайт и сервисы, вы подтверждаете согласие с положениями настоящей 
+                            Политики конфиденциальности. Если у вас есть вопросы или предложения, свяжитесь, 
+                            пожалуйста, с нашей службой поддержки.
+                          </p>
+                        </div>
+                    </div>
+                <script src="policy.js"></script>
+                </div>
+                
+                </div>
+                
+                <div class="footer-right">
+                    <form method="get" action="#">
+                        <input placeholder="Subscribe our newsletter.." name="search">
+                        <i class="fa fa-envelope-o"></i>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+    <script src="js/all.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCKjLTXdq6Db3Xit_pW_GK4EXuPRtnod4o"></script>
+	<script src="js/mapsed.js"></script>
+	<script src="js/01-custom-places-example.js"></script>
+    <script src="js/custom.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>HostCloud</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="css/versions.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="js/modernizer.js"></script>
+
+</head>
+<body class="host_version"> 
+	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header tit-up">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">Вход</h4>
+			</div>
+			<div class="modal-body customer-box row">
+				<div class="col-md-12">
+					<ul class="nav nav-tabs">
+						<li class="active"><a href="#Login" data-toggle="tab">Войти</a></li>
+						<li><a href="#Registration" data-toggle="tab">Регистрация</a></li>
+					</ul>
+					<div class="tab-content">
+						<div class="tab-pane active" id="Login">
+							<form role="form" class="form-horizontal">
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="email1" placeholder="Name" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="exampleInputPassword1" placeholder="Email" type="email">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-10">
+									<button type="submit" class="btn btn-light btn-radius btn-brd grd1">
+										Отправить
+									</button>
+									<a class="for-pwd" href="javascript:;">Забыли пароль?</a>
+								</div>
+							</div>
+							</form>
+						</div>
+						<div class="tab-pane" id="Registration">
+							<form role="form" class="form-horizontal">
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" placeholder="Name" type="text">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="email" placeholder="Email" type="email">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="mobile" placeholder="Mobile" type="email">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<input class="form-control" id="password" placeholder="Password" type="password">
+								</div>
+							</div>
+							<div class="row">							
+								<div class="col-sm-10">
+									<button type="button" class="btn btn-light btn-radius btn-brd grd1">
+										Сохранить &amp; Продолжить
+									</button>
+									<button type="button" class="btn btn-light btn-radius btn-brd grd1">
+										Отмена</button>
+								</div>
+							</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	  </div>
+	</div>
+	<div id="preloader">
+		<div class="loading">
+			<div class="finger finger-1">
+				<div class="finger-item">
+				<span></span><i></i>
+				</div>
+			</div>
+  			<div class="finger finger-2">
+				<div class="finger-item">
+				<span></span><i></i>
+				</div>
+			</div>
+  			<div class="finger finger-3">
+				<div class="finger-item">
+				  <span></span><i></i>
+				</div>
+			</div>
+  			<div class="finger finger-4">
+				<div class="finger-item">
+				<span></span><i></i>
+				</div>
+			</div>
+  			<div class="last-finger">
+				<div class="last-finger-item"><i></i></div>
+			</div>
+		</div>
+	</div>
+
+    <header class="header header_style_01">
+        <nav class="megamenu navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Переключатель навигации</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="images/logos/logo-hosting.png" alt="image"></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a class="active" href="index.html">Главная</a></li>
+                        <li><a href="features.html">Особенности </a></li>
+                        <li><a href="domain.html">Домены</a></li>
+                        <li><a href="hosting.html">Хостинг</a></li>
+                        <li><a href="pricing.html">Тарифы</a></li>
+
+                        <li><a href="contact.html">Контакты</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="btn-light btn-radius btn-brd log" href="#" data-toggle="modal" data-target="#login"><i class="flaticon-padlock"></i> Вход</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+	
+	<div id="bootstrap-touch-slider" class="carousel bs-slider fade  control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="false" >
+		<ol class="carousel-indicators">
+			<li data-target="#bootstrap-touch-slider" data-slide-to="0" class="active"></li>
+			<li data-target="#bootstrap-touch-slider" data-slide-to="1"></li>
+			<li data-target="#bootstrap-touch-slider" data-slide-to="2"></li>
+		</ol>
+		<div class="carousel-inner" role="listbox">
+			<div class="item active">
+				<div id="home" class="first-section" style="background-image:url('uploads/slider-01.jpg');">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 col-sm-12 text-center">
+								<div class="big-tagline">
+									<img src="images/logos/logo-hosting.png" alt="image">
+									<h2 data-animation="animated zoomInRight">Лучший <strong> хостинг</strong> для вашего сайта</h2>
+									<p class="lead" data-animation="animated fadeInLeft">Надежный и быстрый хостинг с круглосуточной поддержкой.</p>
+									 <a data-scroll href="#pricing" class="btn btn-light btn-radius btn-brd effect-1 slide-btn" data-animation="animated fadeInLeft">Выбрать тариф</a>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a data-scroll href="#overviews" class="btn btn-light btn-radius btn-brd effect-1 slide-btn" data-animation="animated fadeInRight">Наши преимущества</a>
+								</div>
+							</div>
+						</div>        
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div id="home" class="first-section" style="background-image:url('uploads/slider-02.jpg');">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 col-sm-12 text-center">
+								<div class="big-tagline">
+									<img src="images/logos/logo-hosting.png" alt="image">
+									<h2 data-animation="animated zoomInRight">Найдите идеальный <strong>хостинг</strong></h2>
+									<p class="lead" data-animation="animated fadeInLeft">Быстрая и стабильная работа вашего сайта - наша главная задача.</p>
+									 <a data-scroll href="#pricing" class="btn btn-light btn-radius btn-brd effect-1 slide-btn" data-animation="animated fadeInLeft">Выбрать тариф</a>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a data-scroll href="#overviews" class="btn btn-light btn-radius btn-brd effect-1 slide-btn" data-animation="animated fadeInRight">Наши преимущества</a>
+								</div>
+							</div>
+						</div>         
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div id="home" class="first-section" style="background-image:url('uploads/slider-03.jpg');">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 col-sm-12 text-center">
+								<div class="big-tagline">
+									<img src="images/logos/logo-hosting.png" alt="image">
+									<h2 data-animation="animated zoomInRight">Мощные <strong>VPS серверы</strong> для вашего бизнеса</h2>
+									<p class="lead" data-animation="animated fadeInLeft">1 IP включен в каждый сервер (больше - по запросу для обоснования)
+										Выбирайте любую ОС (CentOS, Windows, Debian, Fedora)
+										БЕСПЛАТНЫЕ перезагрузки</p>
+									 <a data-scroll href="#pricing" class="btn btn-light btn-radius btn-brd effect-1 slide-btn" data-animation="animated fadeInLeft">Выбрать тариф</a>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<a data-scroll href="#overviews" class="btn btn-light btn-radius btn-brd effect-1 slide-btn" data-animation="animated fadeInRight">Наши преимущества</a>
+								</div>
+							</div>
+						</div>            
+					</div>
+				</div>
+			</div>
+			<a class="left carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="prev">
+				<span class="fa fa-angle-left" aria-hidden="true"></span>
+				<span class="sr-only">Предыдущий</span>
+			</a>
+			<a class="right carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="next">
+				<span class="fa fa-angle-right" aria-hidden="true"></span>
+				<span class="sr-only">Следующий</span>
+			</a>
+		</div>
+	</div>
+	
+    <div id="overviews" class="section wb">
+        <div class="container">
+            <div class="section-title row text-center">
+                <div class="col-md-8 col-md-offset-2">
+                    <h3>О компании</h3>
+                    <p class="lead">Мы - команда профессионалов, предлагающая надежные и доступные решения для вашего онлайн-бизнеса.</p>
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="message-box">
+                        <h4>НАДЕЖНЫЙ ХОСТИНГ ПАРТНЕР</h4>
+                        <h2>Мы помогаем вашему бизнесу расти</h2>
+                        <p class="lead">Мы предлагаем широкий спектр услуг, чтобы удовлетворить любые потребности вашего сайта, от малого блога до крупного интернет-магазина.</p>
+
+                        <p> Мы используем современное оборудование и передовые технологии, чтобы гарантировать стабильную и быструю работу вашего сайта.  Наша круглосуточная поддержка всегда готова помочь вам решить любые вопросы. </p>
+
+                        <a href="contact.html" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1">Узнать больше</a>
+                    </div>
+                </div>
+				
+				<div class="col-md-6">
+                    <div class="post-media wow fadeIn">
+                        <img src="uploads/about_02.jpg" alt="" class="img-responsive img-rounded">
+                        <a href="http://www.youtube.com/watch?v=nrJtHemSPW4" data-rel="prettyPhoto[gal]" class="playbutton"><i class="flaticon-play-button"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="invis"> 
+
+            <div class="row"> 
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="icon-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                        <i class="flaticon-server global-radius effect-1 alignleft"></i>
+                        <h3>Неограниченная пропускная способность</h3>
+                        <p>Забудьте о лимитах! Ваш сайт будет работать быстро и стабильно даже при больших нагрузках.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="icon-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
+                        <i class="flaticon-cloud-computing-1 global-radius effect-1 alignleft"></i>
+                        <h3>Неограниченный трафик</h3>
+                        <p>Привлекайте больше посетителей без ограничений! Мы не ограничиваем трафик на ваших сайтах.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="icon-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                        <i class="flaticon-world-wide-web global-radius effect-1 alignleft"></i>
+                        <h3>1 домен бесплатно</h3>
+                        <p>Получите бесплатный домен при заказе хостинга на год! Зарегистрируйте свой сайт и начните свой бизнес онлайн.</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="hr3"> 
+
+            <div class="row"> 
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="icon-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                        <i class="flaticon-cup global-radius effect-1 alignleft"></i>
+                        <h3>Круглосуточная поддержка</h3>
+                        <p>Наша команда экспертов всегда готова помочь вам решить любые вопросы в любое время суток.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="icon-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                        <i class="flaticon-cer-file-format global-radius effect-1 alignleft"></i>
+                        <h3>Бесплатный SSL-сертификат</h3>
+                        <p>Защитите данные ваших клиентов и повысьте доверие к вашему сайту с помощью бесплатного SSL-сертификата.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="icon-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
+                        <i class="flaticon-locked global-radius effect-1 alignleft"></i>
+                        <h3>Высокая безопасность</h3>
+                        <p>Мы обеспечиваем защиту ваших сайтов от DDoS-атак, чтобы ваш бизнес оставался онлайн в любое время.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="domain" class="parallax section noover" data-stellar-background-ratio="0.7" style="background-image:url('uploads/parallax_11.jpg');">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-5 col-sm-12">
+                    <div class="customwidget text-left">
+                        <h1>Подберите идеальный домен для своего сайта</h1>
+                        <p>Найдите идеальное имя для вашего сайта с помощью нашего удобного инструмента поиска доменов. Мы предлагаем широкий выбор доменных зон.</p>
+                        <ul class="list-inline">
+                            <li><i class="fa fa-check"></i> Простота и удобство поиска</li>
+                            <li><i class="fa fa-check"></i> Создано сайтов 4k</li>
+                        </ul>
+                        <a href="#hosting" data-scroll class="btn btn-light grd1 effect-1 btn-radius btn-brd">Пакеты хостинга</a>
+                    </div>
+                </div>
+
+                <div class="col-md-7">
+                    <form class="checkdomain form-inline">
+                        <div class="checkdomain-wrapper">
+                            <div class="form-group">
+                                <label class="sr-only" for="domainnamehere">Доменное имя</label>
+                                <input type="text" class="form-control" id="domainnamehere" placeholder="Enter domain name here..">
+                                <button type="submit" class="btn btn-primary grd1"><i class="fa fa-search"></i></button>
+                            </div>
+                            <hr>
+                            <div class="clearfix"></div>
+                            <div class="checkbox checkbox-warning">
+                                <input id="domaincom" type="checkbox" class="styled" checked>
+                                <label for="domaincom">.com</label>
+                            </div>
+                            <div class="checkbox checkbox-warning">
+                                <input id="domainnet" type="checkbox" class="styled" checked>
+                                <label for="domainnet">.net</label>
+                            </div>
+                            <div class="checkbox checkbox-warning">
+                                <input id="domainorg" type="checkbox" class="styled">
+                                <label for="domainorg">.org</label>
+                            </div>
+                            <div class="checkbox checkbox-warning">
+                                <input id="domaintv" type="checkbox" class="styled">
+                                <label for="domaintv">.tv</label>
+                            </div>
+                            <div class="checkbox checkbox-warning">
+                                <input id="domaininfo" type="checkbox" class="styled">
+                                <label for="domaininfo">.info</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="hosting" class="section wb" style="background: rgb(248, 248, 248)">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>Тарифы на хостинг</h3>
+                <p class="lead">Выберите оптимальный тарифный план для вашего сайта и начните прямо сейчас!</p>
+            </div>
+
+            <div class="row dev-list text-center">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                    <div class="widget clearfix">
+                        <img src="uploads/hosting_01.jpg" alt="" class="img-responsive">
+                        <div class="widget-title">
+                            <h3>Общий хостинг</h3>
+                            <small>От $40 в месяц</small>
+                        </div>
+                        <p>Идеальное решение для начинающих. Быстрая и стабильная работа вашего сайта по доступной цене.</p>
+
+                        <hr> 
+
+                        <div class="footer-social">
+                            <a href="#" class="btn global-radius" data-toggle="tooltip" data-placement="top" title="Free Page Builder"><i class="flaticon-coding"></i></a>
+                            <a href="#" class="btn global-radius" data-toggle="tooltip" data-placement="top" title="WordPress Support"><i class="flaticon-wordpress-logo"></i></a>
+                            <a href="#" class="btn global-radius" data-toggle="tooltip" data-placement="top" title="1 Domain Free"><i class="flaticon-world-wide-web"></i></a>
+                            <a href="#" class="btn global-radius"  data-toggle="tooltip" data-placement="top" title="50MB Bandwdith"><i class="flaticon-cloud-computing-1"></i></a>
+                        </div>
+
+                        <hr>
+
+                        <a href="contact.html" data-scroll class="btn btn-light grd1 effect-1 btn-radius btn-brd">Заказать сейчас</a>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                    <div class="widget clearfix">
+                        <img src="uploads/hosting_02.jpg" alt="" class="img-responsive">
+                        <div class="widget-title">
+                            <h3>Реселлерский хостинг</h3>
+                            <small>От $80 в месяц</small>
+                        </div>
+                        <p>Высокопроизводительные VPS серверы для требовательных проектов. Получите полный контроль над своим сервером.</p>
+
+                        <hr> 
+
+                        <div class="footer-social">
+                            <a href="#" class="btn global-radius" data-toggle="tooltip" data-placement="top" title="Free Page Builder"><i class="flaticon-coding"></i></a>
+                            <a href="#" class="btn global-radius" data-toggle="tooltip" data-placement="top" title="WordPress Support"><i class="flaticon-wordpress-logo"></i></a>
+                            <a href="#" class="btn global-radius" data-toggle="tooltip" data-placement="top" title="1 Domain Free"><i class="flaticon-world-wide-web"></i></a>
+                            <a href="#" class="btn global-radius"  data-toggle="tooltip" data-placement="top" title="150MB Bandwdith"><i class="flaticon-cloud-computing-1"></i></a>
+                            <a href="#" class="btn global-radius"  data-toggle="tooltip" data-placement="top" title="Money Back Guarentee"><i class="flaticon-money"></i></a>
+                        </div>
+                        <hr>
+
+                        <a href="contact.html" data-scroll class="btn btn-light grd1 effect-1 btn-radius btn-brd">Заказать сейчас</a>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
+                    <div class="widget clearfix">
+                        <img src="uploads/hosting_03.jpg" alt="" class="img-responsive">
+                        <div class="widget-title">
+                            <h3>Выделенный сервер</h3>
+                            <small>От 120 долларов в месяц</small>
+                        </div>
+                        <p>Максимальная мощность и полный контроль для вашего бизнеса. Выделенные серверы с гарантированной производительностью.</p>
+
+                        <hr> 
+
+                        <div class="footer-social">
+                            <a href="#" class="btn global-radius" data-toggle="tooltip" data-placement="top" title="Free Page Builder"><i class="flaticon-coding"></i></a>
+                            <a href="#" class="btn global-radius" data-toggle="tooltip" data-placement="top" title="WordPress Support"><i class="flaticon-wordpress-logo"></i></a>
+                            <a href="#" class="btn global-radius" data-toggle="tooltip" data-placement="top" title="1 Domain Free"><i class="flaticon-world-wide-web"></i></a>
+                            <a href="#" class="btn global-radius"  data-toggle="tooltip" data-placement="top" title="Unlimited Bandwdith"><i class="flaticon-cloud-computing-1"></i></a>
+                            <a href="#" class="btn global-radius"  data-toggle="tooltip" data-placement="top" title="Money Back Guarentee"><i class="flaticon-money"></i></a>
+                            <a href="#" class="btn global-radius"  data-toggle="tooltip" data-placement="top" title="24/7 Support"><i class="flaticon-lifesaver-security-sportive-tool"></i></a>
+                        </div>
+                        <hr>
+
+                        <a href="contact.html" data-scroll class="btn btn-light grd1 effect-1 btn-radius btn-brd">Заказать сейчас</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<div class="section cl">
+		<div class="container">
+			<div class="row text-left stat-wrap">
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-hosting"></i></span>
+					<p class="stat_count">12000</p>
+					<h3>Размещенных сайты</h3>
+				</div>
+
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-domain-registration"></i></span>
+					<p class="stat_count">24000</p>
+					<h3>Проданных доменов</h3>
+				</div>
+
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i class="flaticon-mail"></i></span>
+					<p class="stat_count">5000</p>
+					<h3>Аккаунтов электронных почт</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <div id="pricing" class="section lb">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>Готовы приступить к работе?</h3>
+                <p class="lead">Устройте себе красную ковровую дорожку <strong>всего 39 долларов в месяц!</strong> По оценкам, 3,5 миллиона созданных персональных блогов.<br> Друг с другом мы делимся платными WordPress темами WP Service...</p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="message-box">
+                        <ul class="nav nav-pills nav-stacked" id="myTabs">
+                            <li class="active"><a href="#tab1" data-toggle="pill">Ежемесячная подписка</a></li>
+                            <li><a href="#tab2" data-toggle="pill">Годовая подписка</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="invis">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="tab-content">
+                        <div class="tab-pane active fade in" id="tab1">
+                            <div class="row text-center">
+                                <div class="col-md-4">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2>Общий хостинг</h2>
+                                            <h3>$85/месяц</h3>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-features">
+                                            <p><i class="fa fa-envelope-o"></i> <strong>250</strong> Адресов электронных почт</p>
+                                            <p><i class="fa fa-rocket"></i> <strong>125GB</strong> Хранение</p>
+                                            <p><i class="fa fa-database"></i> <strong>140</strong> Базы данных</p>
+                                            <p><i class="fa fa-link"></i> <strong>60</strong> Домены</p>
+                                            <p><i class="fa fa-life-ring"></i> <strong>24/7 Неограниченная </strong> Поддержка</p>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a href="contact.html" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1">Заказать сейчас</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2>Хостинг WordPress</h2>
+                                            <h3>$59/год</h3>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-text">
+                                            <p>Это идеальный выбор для малого бизнеса и стартапов.</p>
+                                        </div>
+                                        <div class="pricing-table-features">
+                                            <p><i class="fa fa-envelope-o"></i> <strong>150</strong> Адресов электронных почт</p>
+                                            <p><i class="fa fa-rocket"></i> <strong>65GB</strong> Хранения</p>
+                                            <p><i class="fa fa-database"></i> <strong>60</strong> Базы данных</p>
+                                            <p><i class="fa fa-link"></i> <strong>30</strong> Домены</p>
+                                            <p><i class="fa fa-life-ring"></i> <strong>24/7 Неограниченная</strong> Поддержка</p>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a href="contact.html" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1">Заказать сейчас</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2>Реселлерский хостинг</h2>
+                                            <h3>85 долларов / один раз</h3>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-features">
+                                            <p><i class="fa fa-envelope-o"></i> <strong>250</strong> Адресов электронных почт</p>
+                                            <p><i class="fa fa-rocket"></i> <strong>125GB</strong> Хранения</p>
+                                            <p><i class="fa fa-database"></i> <strong>140</strong> Базы данных</p>
+                                            <p><i class="fa fa-link"></i> <strong>60</strong> Домены</p>
+                                            <p><i class="fa fa-life-ring"></i> <strong>24/7 Неограниченная </strong> Поддержка</p>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a href="contact.html" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1">Заказать сейчас</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="tab2">
+                            <div class="row text-center">
+                                <div class="col-md-6">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2>Выделенный сервер</h2>
+                                            <h3>$85/месяц</h3>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-features">
+                                            <p><i class="fa fa-envelope-o"></i> <strong>250</strong> Адреса электронной почты</p>
+                                            <p><i class="fa fa-rocket"></i> <strong>125GB</strong> Хранения</p>
+                                            <p><i class="fa fa-database"></i> <strong>140</strong> Базы данных</p>
+                                            <p><i class="fa fa-link"></i> <strong>60</strong> Домены</p>
+                                            <p><i class="fa fa-life-ring"></i> <strong>24/7 Неограниченная </strong> Поддержка</p>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a href="contact.html" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1">Заказать сейчас</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="pricing-table pricing-table-highlighted">
+                                        <div class="pricing-table-header grd1">
+                                            <h2>VPS-сервер</h2>
+                                            <h3>$59/месяц</h3>
+                                        </div>
+                                        <div class="pricing-table-space"></div>
+                                        <div class="pricing-table-text">
+                                            <p>Это идеальный выбор для малого бизнеса и стартапов.</p>
+                                        </div>
+                                        <div class="pricing-table-features">
+                                            <p><i class="fa fa-envelope-o"></i> <strong>150</strong> Адресов электронных почт</p>
+                                            <p><i class="fa fa-rocket"></i> <strong>65GB</strong> Хранения</p>
+                                            <p><i class="fa fa-database"></i> <strong>60</strong> Базы данных</p>
+                                            <p><i class="fa fa-link"></i> <strong>30</strong> Домены</p>
+                                            <p><i class="fa fa-life-ring"></i> <strong>24/7 Неограниченная</strong> Поддержка</p>
+                                        </div>
+                                        <div class="pricing-table-sign-up">
+                                            <a href="contact.html" data-scroll class="btn btn-light btn-radius btn-brd grd1 effect-1">Заказать сейчас</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="support" class="section wb">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>Нужна помощь? Мы всегда на связи!</h3>
+                <p class="lead">Оставьте свою заявку, и мы свяжемся с вами в ближайшее время. Мы поможем подобрать оптимальное решение для вашего сайта.<br>Тысячи клиентов уже доверяют нам!</p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="contact_form">
+                        <div id="message"></div>
+                        <form id="contactform" class="row" action="contact.php" name="contactform" method="post">
+                            <fieldset class="row-fluid">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <input type="text" name="first_name" id="first_name" class="form-control" placeholder="First Name">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Last Name">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <input type="email" name="email" id="email" class="form-control" placeholder="Your Email">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <input type="text" name="phone" id="phone" class="form-control" placeholder="Your Phone">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <label class="sr-only">Выберите услугу</label>
+                                    <select name="select_service" id="select_service" class="selectpicker form-control" data-style="btn-white">
+                                        <option value="12">Выберите пакет</option>
+                                        <option value="Web Design">Веб-хостинг</option>
+                                        <option value="Web Development">Общий хостинг</option>
+                                        <option value="Graphic Design">Реселлерский хостинг</option>
+                                        <option value="Others">Другое</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <label class="sr-only">Выберите страну</label>
+                                    <select name="select_price" id="select_price" class="selectpicker form-control" data-style="btn-white">
+                                        <option value="India">Индия</option>
+                                        <option value="Italy">Italy</option>
+                                        <option value="Holland">Голландия</option>
+                                        <option value="Germany">Германия</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <textarea class="form-control" name="comments" id="comments" rows="6" placeholder="Give us more details.."></textarea>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                                    <button type="submit" value="SEND" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Получить предложение</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="parallax section db parallax-off" style="background-image:url('uploads/parallax_02.jpg');">
+        <div class="container">
+            <div class="row logos">
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src="uploads/logo_01.png" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src="uploads/logo_02.png" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src="uploads/logo_03.png" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src="uploads/logo_04.png" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src="uploads/logo_05.png" alt="" class="img-repsonsive"></a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
+                    <a href="#"><img src="uploads/logo_06.png" alt="" class="img-repsonsive"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section nopad cac text-center">
+        <a href="#"><h3>Закажите надежный хостинг прямо сейчас!</h3></a>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <img src="images/logos/logo-hosting-light.png" alt="">
+                            <small>Веб-хостинг</small>
+                        </div>
+                        <p> Мы предлагаем широкий выбор тарифных планов, чтобы удовлетворить любые потребности вашего сайта. От простого блога до крупного интернет-магазина.</p>
+                        <p>Наши серверы обеспечивают высокую скорость и стабильность работы вашего сайта. Круглосуточная поддержка всегда готова помочь.</p>
+                    </div>
+                </div>
+				
+                <div class="col-md-3 col-sm-3 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Контактная информация</h3>
+                        </div>
+
+                        <ul class="footer-links">
+                            <li><a href="mailto:#">sup@hostcloud.com</a></li>
+                            <li>883 10th Avenue, New York, NY 10019</li>
+                            <li>+1 313 292 6730</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-2 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Соц. сети</h3>
+                        </div>
+                        <ul class="footer-links">
+                            <li><a href="#"><i class="fa fa-facebook"></i> 22.543 Likes</a></li>
+                            <li><a href="#"><i class="fa fa-github"></i> 128 Projects</a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i> 12.860 Followers</a></li>
+                            <li><a href="#"><i class="fa fa-dribbble"></i> 3312 Shots</a></li>
+                            <li><a href="#"><i class="fa fa-pinterest"></i>3331 Pins</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="copyrights">
+        <div class="container">
+            <div class="footer-distributed">
+                <div class="footer-left">                   
+                    <p class="footer-company-name">Все права защищены.</p>
+                    <div>
+						<link rel="stylesheet" href="policy.css">
+
+						<a class="policy-link" id="openPolicy">Политика конфиденциальности</a>
+
+							<div class="policy-link-modal" id="policyModal">
+							    <div class="policy-link-modal-content">
+							      <span class="policy-link-close" id="policyClose">&times;</span>
+							      <h2>Политика конфиденциальности</h2>
+							      <br>
+							      <p>
+							        Настоящая Политика конфиденциальности описывает, как компания <strong>HostCloud</strong> 
+							        (далее – «Компания») осуществляет сбор, хранение и обработку персональных данных пользователей. 
+							        Компания стремится обеспечить безопасность и конфиденциальность любой информации, 
+							        предоставляемой клиентами или собираемой в процессе пользования нашими услугами.
+							      </p>
+							      <br>
+							      <p>
+							        1. <strong>Сбор персональных данных.</strong> Мы можем собирать информацию о пользователях, 
+							        включая контактные данные, сведения о платежах и активности на сайте. 
+							        Сбор осуществляется при регистрации аккаунта, оформлении заявок и при использовании 
+							        функционала платформы.
+							      </p>
+							      <br>
+							      <p>
+							        2. <strong>Использование персональных данных.</strong> Компания использует собранную 
+							        информацию для предоставления и улучшения услуг, обработки операций и обеспечения 
+							        законности деятельности. Данные также могут использоваться для информирования 
+							        о новых продуктах, сервисах и специальных предложениях.
+							      </p>
+							      <br>
+							      <p>
+							        3. <strong>Передача третьим лицам.</strong> Компания не передаёт персональные данные 
+							        третьим лицам, за исключением случаев, предусмотренных законодательством 
+							        или необходимых для выполнения обязательств перед пользователями (например, 
+							        платёжным и финансовым организациям).
+							      </p>
+							      <br>
+							      <p>
+							        4. <strong>Защита данных.</strong> Мы применяем технологические и организационные меры 
+							        для защиты персональных данных от несанкционированного доступа, потери, изменения 
+							        или раскрытия. Обработка данных осуществляется в соответствии с действующими нормами 
+							        и стандартами информационной безопасности.
+							      </p>
+							      <br>
+							      <p>
+							        5. <strong>Файлы «cookie».</strong> Наш сайт может использовать cookie для улучшения 
+							        взаимодействия с пользователями, запоминая личные настройки и предпочтения. Пользователи 
+							        могут ограничить работу cookie или отключить их в настройках браузера, однако 
+							        это может повлиять на доступный функционал.
+							      </p>
+							      <br>
+							      <p>
+							        6. <strong>Изменения в Политике.</strong> Компания оставляет за собой право вносить 
+							        изменения в настоящую Политику в любое время. Изменения вступают в силу с момента 
+							        публикации обновлённой версии на нашем сайте.
+							      </p>
+							      <br>
+							      <p>
+							        Используя наш сайт и сервисы, вы подтверждаете согласие с положениями настоящей 
+							        Политики конфиденциальности. Если у вас есть вопросы или предложения, свяжитесь, 
+							        пожалуйста, с нашей службой поддержки.
+							      </p>
+							    </div>
+							</div>
+						<script src="policy.js"></script>
+					</div>
+                </div>
+                <div class="footer-right">
+                    <form method="get" action="#">
+                        <input placeholder="Subscribe our newsletter.." name="search">
+                        <i class="fa fa-envelope-o"></i>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <script src="js/all.js"></script>
+    <script src="js/custom.js"></script>
+
+</body>
+</html>
